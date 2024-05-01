@@ -9,15 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.bookStore.service.BookService;
 import com.bookStore.service.MyBookListService;
-
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
 public class BookController {
@@ -31,6 +26,16 @@ public class BookController {
 	@GetMapping("/")
 	public String Home() {
 		return "home";
+	}
+
+	@RequestMapping("/home")
+	public String home() {
+		return "home";
+	}
+
+	@RequestMapping("/home1")
+	public String home1() {
+		return "home1";
 	}
 
 	@GetMapping("/book_register")
